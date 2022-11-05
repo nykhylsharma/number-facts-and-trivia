@@ -1,0 +1,16 @@
+.triviaDiv{
+    border:1px dotted;
+}
+
+.triviaTitle{
+    font-size: large;
+    text-align: center;
+    margin: 5px auto;    
+}
+
+.triviaText{
+    font-size: medium;
+    text-align: left;
+    margin: 5px auto;
+    padding: 5px;
+}
