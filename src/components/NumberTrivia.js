@@ -30,7 +30,7 @@ export default function NumberTrivia() {
 
   return (
     <div>
-      <h2>Number Trivia Component</h2>
+      <h2 className="tc">Number Trivia Component</h2>
       <NumberSearch getNumberFn={getNumber} enterButtonFn={enterButton} fetchTriviaAndMathsFactsFn={fetchTriviaAndMathFacts} />
       <Trivia title={"Trivia"} text={trivia} />
       <Trivia title={"Math Fact"} text={mathFact} />

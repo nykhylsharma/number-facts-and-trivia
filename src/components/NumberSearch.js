@@ -2,7 +2,7 @@ import 'tachyons';
 
 export default function NumberSearch({getNumberFn, enterButtonFn, fetchTriviaAndMathsFactsFn}) {
   return (
-    <div>
+    <div className='center'>
       <input
         name="numberInput"
         type="number"

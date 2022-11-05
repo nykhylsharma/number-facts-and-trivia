@@ -23,8 +23,8 @@ export default function DateTrivia() {
 
   return (
     <div>
-      <h2>Date Trivia</h2>
-      <DatePicker format="MM-dd-y" onChange={fetchTrivia} value={value} />
+      <h2 className="tc">Date Trivia</h2>
+      <DatePicker format="MM-dd-y" className="center" onChange={fetchTrivia} value={value} />
       <Trivia title={"Date Trivia"} text={datetrivia}/>
       <Trivia title={"Year Trivia"} text={yeartrivia}/>
     </div>
