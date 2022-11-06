@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/number-facts-and-trivia/static/css/main.0db3ca5e.css",
-    "main.js": "/number-facts-and-trivia/static/js/main.740aa16c.js",
+    "main.js": "/number-facts-and-trivia/static/js/main.3fac2097.js",
     "static/js/787.3aab177c.chunk.js": "/number-facts-and-trivia/static/js/787.3aab177c.chunk.js",
     "index.html": "/number-facts-and-trivia/index.html",
     "main.0db3ca5e.css.map": "/number-facts-and-trivia/static/css/main.0db3ca5e.css.map",
-    "main.740aa16c.js.map": "/number-facts-and-trivia/static/js/main.740aa16c.js.map",
+    "main.3fac2097.js.map": "/number-facts-and-trivia/static/js/main.3fac2097.js.map",
     "787.3aab177c.chunk.js.map": "/number-facts-and-trivia/static/js/787.3aab177c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0db3ca5e.css",
-    "static/js/main.740aa16c.js"
+    "static/js/main.3fac2097.js"
   ]
 }
