@@ -4,13 +4,13 @@ import "tachyons";
 
 function App() {
   return (
-    <div>
+    <>
       <h1 className="tc">Numbers Fun</h1>
         <div className="flex flex-wrap justify-around">
           <NumberTrivia className="outline w-40 pa3 mr3"/>
           <DateTrivia className="outline w-40 pa3 mr3"/>
         </div>
-      </div>
+      </>
   );
 }
 
