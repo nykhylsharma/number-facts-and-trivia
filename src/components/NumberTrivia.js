@@ -9,11 +9,11 @@ export default function NumberTrivia() {
   const [number, setNumber] = useState(0);
 
   function fetchTriviaAndMathFacts() {
-    fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${number}/trivia`)
+    fetch(`http://numbersapi.com/${number}/trivia`)
       .then((data) => data.text())
       .then((trivia) => setTrivia(trivia));
 
-    fetch(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${number}/math`)
+    fetch(`http://numbersapi.com/${number}/math`)
       .then((data) => data.text())
       .then((mathFact) => setMathFact(mathFact));
   }
