@@ -12,11 +12,11 @@ export default function DateTrivia() {
   function fetchTrivia(value) {
     setValue(value);
 
-    fetch(`https://numbersapi.com/${value.getMonth()+1}/${value.getDate()}/date`)
+    fetch(`http://numbersapi.com/${value.getMonth()+1}/${value.getDate()}/date`)
       .then((data) => data.text())
       .then((datetrivia) => setDatetrivia(datetrivia));
 
-    fetch(`https://numbersapi.com/${value.getFullYear()}/year`)
+    fetch(`http://numbersapi.com/${value.getFullYear()}/year`)
       .then((data) => data.text())
       .then((yeartrivia) => setYeartrivia(yeartrivia));
   }
