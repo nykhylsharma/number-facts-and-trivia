@@ -14,11 +14,13 @@ export default function DateTrivia() {
 
     fetch(`http://numbersapi.com/${value.getMonth()+1}/${value.getDate()}/date`)
       .then((data) => data.text())
-      .then((datetrivia) => setDatetrivia(datetrivia));
+      .then((datetrivia) => setDatetrivia(datetrivia))
+      .catch(error => setDatetrivia(error.name+": "+error.message));
 
     fetch(`http://numbersapi.com/${value.getFullYear()}/year`)
       .then((data) => data.text())
-      .then((yeartrivia) => setYeartrivia(yeartrivia));
+      .then((yeartrivia) => setYeartrivia(yeartrivia))
+      .catch(error => setYeartrivia(error.name+": "+error.message));
   }
 
   return (

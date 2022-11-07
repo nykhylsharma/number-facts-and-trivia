@@ -8,14 +8,18 @@ export default function NumberTrivia() {
   const [mathFact, setMathFact] = useState("Hit Fetch!");
   const [number, setNumber] = useState(0);
 
+  //add error handling case for this
   function fetchTriviaAndMathFacts() {
     fetch(`http://numbersapi.com/${number}/trivia`)
       .then((data) => data.text())
-      .then((trivia) => setTrivia(trivia));
+      .then((trivia) => setTrivia(trivia))
+      .catch(error => setTrivia(error.name+": "+error.message));
 
     fetch(`http://numbersapi.com/${number}/math`)
       .then((data) => data.text())
-      .then((mathFact) => setMathFact(mathFact));
+      .then((mathFact) => setMathFact(mathFact))
+      .catch(error => setMathFact(error.name+": "+error.message));
+
   }
 
   function getNumber(event) {
