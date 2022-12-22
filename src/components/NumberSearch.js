@@ -1,6 +1,6 @@
 import 'tachyons';
 
-export default function NumberSearch({getNumberFn, enterButtonFn, fetchTriviaAndMathsFactsFn}) {
+export default function NumberSearch({getNumberFn, buttonEventFn}) {
   return (
     <div className='center'>
       <input
@@ -9,10 +9,10 @@ export default function NumberSearch({getNumberFn, enterButtonFn, fetchTriviaAnd
         placeholder="Enter a number"
         min={0}
         onChange={getNumberFn}
-        onKeyDown={enterButtonFn}
+        onKeyDown={buttonEventFn}
         required
       ></input>
-      <button onClick={fetchTriviaAndMathsFactsFn}>Fetch a Trivia</button>
+      <button onClick={(event) => {buttonEventFn(event)}}>Fetch a Trivia</button>
     </div>
   );
 }

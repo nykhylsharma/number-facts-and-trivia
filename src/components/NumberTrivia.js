@@ -8,36 +8,31 @@ export default function NumberTrivia() {
   const [mathFact, setMathFact] = useState("Hit Fetch!");
   const [number, setNumber] = useState(0);
 
-  //add error handling case for this
-  function fetchTriviaAndMathFacts() {
-    fetch(`http://numbersapi.com/${number}/trivia`)
+  
+  function fetchTriviaAndMathFactsFun(fetchType,value,setValue) {
+    fetch(`http://numbersapi.com/${number}/${fetchType}`)
       .then((data) => data.text())
-      .then((trivia) => setTrivia(trivia))
+      .then((value) => setValue(value))
       .catch(error => setTrivia(error.name+": "+error.message));
-
-    fetch(`http://numbersapi.com/${number}/math`)
-      .then((data) => data.text())
-      .then((mathFact) => setMathFact(mathFact))
-      .catch(error => setMathFact(error.name+": "+error.message));
-
   }
 
   function getNumber(event) {
     setNumber(event.target.value);
   }
 
-  function enterButton(event) {
-    if (event.key === "Enter") {
-      fetchTriviaAndMathFacts();
+  function buttonEvent(event) {
+    if (event.key === "Enter" || event.type === "click") {
+      fetchTriviaAndMathFactsFun("trivia",trivia, setTrivia);
+      fetchTriviaAndMathFactsFun("math",mathFact, setMathFact);
     }
   }
-
+  
   return (
     <div>
       <h2 className="tc">Number Trivia Component</h2>
-      <NumberSearch getNumberFn={getNumber} enterButtonFn={enterButton} fetchTriviaAndMathsFactsFn={fetchTriviaAndMathFacts} />
+      <NumberSearch getNumberFn={getNumber} buttonEventFn={buttonEvent}/>
       <Trivia title={"Trivia"} text={trivia} />
-      <Trivia title={"Math Fact"} text={mathFact} />
+      {<Trivia title={"Math Fact"} text={mathFact} />}
     </div>
   );
 }
